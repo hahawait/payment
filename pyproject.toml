@@ -1,0 +1,36 @@
+[project]
+name = "payment-service"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.10",
+    "aiojobs>=1.3.0",
+    "aiokafka>=0.12.0",
+    "alembic>=1.14.0",
+    "asyncpg>=0.30.0",
+    "backoff>=2.2.1",
+    "dishka>=1.4.2",
+    "fastapi>=0.115.6",
+    "gunicorn>=23.0.0",
+    "itsdangerous>=2.2.0",
+    "orjson>=3.10.12",
+    "passlib>=1.7.4",
+    "pydantic[email]>=2.10.3",
+    "pydantic-settings>=2.7.0",
+    "pyinstrument>=5.0.0",
+    "python-jose>=3.3.0",
+    "sentry-sdk>=2.19.2",
+    "sqlalchemy>=2.0.36",
+    "uvicorn>=0.32.1",
+    "ujson>=5.10.0",
+]
+
+
+[tool.ruff]
+line-length = 122
+select = ["E", "W", "F", "T", "ANN"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.ruff.format]
+line-ending = "auto"
+exclude = ["src/migrations/env.py"]
